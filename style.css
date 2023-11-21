@@ -1,0 +1,315 @@
+
+/* CSS DESIGN USING MOBILE-FIRST APPROACH */
+:root {
+    /* FONTS */
+    --FF:'Rubik', sans-serif;
+    --FS: 1rem;
+
+    /* COLORS */
+    /* Text-Colors */
+    --Pale-Violet: hsl(276, 100%, 81%);
+    --Moderate-Violet: hsl(276, 55%, 52%);
+    --Desaturated-Dark-Violet: hsl(271, 15%, 43%);
+    --Grayish-Blue: hsl(206, 6%, 79%);
+    --Very-Dark-Desaturated-Violet: hsl(271, 36%, 24%);
+    --Dark-Grayish-Violet:hsl(270, 7%, 64%); 
+
+    /* Linear Gradients */
+    --Light-Magenta: hsl(293, 100%, 63%);
+    --Light-Violet: hsl(264, 100%, 61%);
+
+    /* Secondary-Colors */
+    --White: hsl(0, 0%, 100%);
+    --Light-Grayish-Violet: hsl(270, 20%, 96%);
+    --Very-Light-Magenta : hsl(289, 100%, 72%);
+}
+ /* || RESET */
+ *,
+ *::after,
+ *::before {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+
+ /* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Balance text wrapping on headings */
+h1, h2,
+h3, h4 {
+  text-wrap: balance;
+}
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+    color: currentColor;
+  }
+
+  /* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+    min-height: 10em;
+  }
+
+  /* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+ /* || GENERAL STYLES */
+ html {
+    -moz-text-size-adjust: none;
+     -webkit-text-size-adjust: none;
+     text-size-adjust: none;
+     scroll-behavior: smooth;
+      overflow: scroll;
+  }
+  
+  body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    font-family: var(--FF);
+    font-size: var(--FS); 
+    background-color: var(--Light-Grayish-Violet);
+  }
+
+  /* Typography */
+ h4{
+font-size: 1.5rem;
+text-align: center;
+font-weight: 900;
+color: var(--Desaturated-Dark-Violet);
+}
+p {
+  color: var(--Dark-Grayish-Violet);
+  margin-top: 1.1em;
+  text-align: center;
+}
+h5 {
+  color: var(--White);
+  font-size: 0.9rem;
+  font-weight: 300;
+  text-align: center;
+}
+.header__text{
+  color: var(--Dark-Grayish-Violet);
+  font-size: 0.7rem;
+  margin-top: -0.1em;
+  text-align: center;
+}
+.mobile__text{
+  color: var(--Moderate-Violet);
+  border-radius: 10px;
+  background-color: var(--Dark-Grayish-Violet);
+  padding: 0.5em;
+  text-align: justify;
+  font-size: 0.45rem;
+  width: 50%;
+  margin-top: -0.2em;
+}
+.mobile__text1{
+  color: var(--Moderate-Violet);
+  border-radius: 10px;
+  background-color: var(--Dark-Grayish-Violet);
+  padding: 0.5em;
+  text-align: justify;
+  font-size: 0.45rem;
+  width: 50%;
+  margin-top: 0.5em;
+}
+.mobile__text2{
+  color: var(--Desaturated-Dark-Violet);
+  border-radius: 10px;
+  background-color: var(--White);
+  padding: 0.5em;
+  text-align: justify;
+  font-size: 0.45rem;
+  width: 50%;
+  margin-top: 0.8em;
+  margin-left: 13em; 
+}
+.mobile__text3{
+  width: 55%;
+  color: var(--Moderate-Violet);
+  border-radius: 10px;
+  background-color: var(--Dark-Grayish-Violet);
+  padding: 0.6em;
+  text-align: justify;
+  font-size: 0.45rem;
+  margin-top: 0.6em;
+  margin-right: 15em; 
+}
+.btn__text{
+  color: var(--White);
+  font-size: 0.7rem;
+  margin-top: 0.5em;
+}
+.bold{
+  font-weight: 800;
+}
+.input__text{
+  color: var(--Grayish-Blue);
+  font-size: 0.7rem;
+  margin-top: 0.5em;
+}
+  /* Main content */
+ .container{
+    margin: 0 auto;
+    width: 80%;
+ }
+ .main-content{
+  position: relative;
+ }
+.wrapper{
+  margin-top: 40em;
+}
+.main-content::before{
+  content: " ";
+  background:linear-gradient(0.25turn,var(--Light-Violet), var(--Light-Magenta));
+  border-radius: 45% / 50%;
+  min-height: 700px;
+  position: absolute;
+  width: 400px;
+  top: -850px;
+  left: -298px;
+}
+
+/* Mobile Content */
+.mobile__container{
+    margin: 0 auto;
+    width: 250px;
+}
+.mobile__wrapper{
+  background-color: var(--Light-Grayish-Violet);
+  position: absolute;
+  border: 15px solid var(--White);
+  border-radius: 30px;
+  top: 85px;
+  right: 50px;
+  z-index: 3;
+}
+header{
+  overflow: hidden;
+  margin-right: 200px;
+  width: 100%;
+  min-height: 100px;
+  border-radius: 10px;
+  background:linear-gradient(0.25turn,var(--Light-Violet), var(--Light-Magenta));
+  position: relative;
+}
+header::after{
+  content: " ";
+  background-color: var(--White);
+  border-radius: 6px;
+  position: absolute;
+  width: 170px;
+  height: 30px;
+  top: -10px;
+  left: 24px;
+}
+.sam__img{
+  border: 1px solid var(--White);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+}
+svg{
+  fill: var(--White);
+}
+.flex{
+  display: flex;
+  padding: 3em  0 0.2em 1em;
+  justify-content: space-between;
+}
+
+.chat{
+  padding: 0.8em;
+}
+.flex2{
+  display: flex;
+  margin-left: 7em;
+  margin-top: -0.4em;
+ justify-content: space-evenly;
+}
+.dog__img{
+  border-radius: 10px;
+  width: 30px;
+  height: 30px;
+}
+.btn{
+  width: 80%;
+  background:linear-gradient(0.25turn,var(--Light-Violet), var(--Light-Magenta));
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px;
+  padding: 0.2em;
+  margin-top: 0.3em;
+}
+.radio__btn{
+  fill: var(--Very-Light-Magenta);
+  width: 20px;
+  margin-top: 0.5em;
+}
+.input__svg{
+  fill: var(--White);
+  width: 30px;
+  margin-top: 0.5em;
+  background-color: var(--Very-Dark-Desaturated-Violet);
+  border-radius: 50%;
+}
+.input{
+  background-color: var(--White);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px;
+  width: 98%;
+  margin-top: 0.3em;
+  padding: 0.2em;
+}
+.attribution { 
+    font-size: 11px;
+    text-align: center;
+    margin-top: 50em;
+ }
+ .attribution a { 
+    color: hsl(228, 45%, 44%);
+ }
+
+ /* DESKTOP DESIGN */
+ @media(min-width:768px){
+  .container{
+    margin: 0 auto;
+    max-width: 1440px;
+    width: 80%;
+ }
+ .main-content::before{
+  min-height: 1150px;
+  width: 550px;
+}
+.wrapper{
+  margin-left: 30em;
+ margin-top: 20em;
+  width: 40%;
+}
+.mobile__wrapper{
+  top: 95px;
+  right: 850px;
+}
+h4, p{
+  text-align: justify;
+}
+ }
