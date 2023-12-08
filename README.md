@@ -9,7 +9,7 @@ Users are able to:
 ![Web capture_21-11-2023_7450_judithjude369 github io](https://github.com/JudithJude369/Chat-app-CS--illustration/assets/113371056/d22ff3f7-705e-47dd-b0c9-353fe58909de)
 
 ### Links
-[LIVE SERVER](https://judithjude369.github.io/Chat-app-CS--illustration/)
+[LIVE SERVER](https://judithjude369.github.io/Chat-app-CSS--illustration)
 
 ### Built with
 - Semantic HTML5 markup
